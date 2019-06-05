@@ -9,5 +9,5 @@ docker build . -t podbuild:latest
 to run a test run this command:
 
 ```shell
-docker run --volume $(pwd):/tmp/workdir podbuild:latest podman build /tmp/workdir podbuild-inside:latest
+docker run --volume $(pwd):/tmp/workdir podbuild:latest podman --storage-driver vfs build /tmp/workdir podbuild-inside:latest
 ```
